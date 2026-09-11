@@ -1,0 +1,42 @@
+body {
+        text-align: center;
+        background-color: black;
+    }
+
+    header {
+        background-color: lightblue;
+    }
+
+    footer {
+        background-color: lightgray;
+    }
+#name {
+font-family: "Courier New", monospace;
+}
+
+img {
+    border: 3px solid black;
+}
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 200px;
+    background-color: pink;
+}
+main {
+background-color: lavender;
+padding: 20px;
+margin: 20px;
+}
+
+main h2 {
+color: darkblue;
+}
+
+main p {
+font-size: 18px;
+line-height: 1.5;
+}
