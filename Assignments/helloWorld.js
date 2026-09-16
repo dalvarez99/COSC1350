@@ -7,3 +7,9 @@
 let hello = "Hello World";
 
 console.log(hello);
+
+let greeting = "Hi, the program is running successfully!";
+let decimalNumber = 4.5;
+let zero = 0;
+let negativeNumber = -10
+let isTrue = true;
