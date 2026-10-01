@@ -9,12 +9,32 @@
     </head>
 
  <body>
-    <nav> <a href="index.html">Home</a> 
-        <a href="about.html">About Me</a> 
-        <a href="inspiration.html">Inspirations</a> 
-        <a href="calculator.html">Calculator</a> 
+
+    <nav> <a href="index.html">Home</a>
+         <a href="about.html">About Me</a> 
+         <a href="inspiration.html">Inspirations</a>
+         <a href="calculator.html">Calculator</a> 
     </nav>
-    
+
+    <h1>Tip Calculator</h1>
+
+    <label for ="bill">Bill Amount:</label>
+    <input type="number" id="bill" name="bill">
+
+    <br><br>
+
+    <label for="service">Service Quality:</label>
+    <select id="service" name="service">
+        <option value="25">Excellent (25%)</option>
+        <option value="20">Good (20%)</option>
+         <option value="15">Fair (15%)</option>
+         <option value="10">Poor (10%)</option>
+    </select>
+
+    <br><br>
+
+    <button id="calculate">Calculate Tip</button>
+
     <div id="sidebar">
     This is a side bar.
     </div>
@@ -44,5 +64,8 @@
 <footer>
     <a href="mailto:dulcealvarezperalta@westernwyoming.edu">dulcealvarezperalta@westernwyoming.edu</a>
 </footer>
+
+<script src="calculator.js"></script>
+
 </body>
 </html>
