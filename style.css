@@ -28,23 +28,22 @@ border-radius: 10px;
 main h1 {
     color: darkblue; 
 }
-main h2 {
-color: darkblue;
+main label {
+display: block;
+margin-top: 15px;
+margin-bottom: 5px;
+}
+main input,
+main select {
+    display: block;
+    margin: 0 auto; 
+    padding: 8px; 
+    width: 200px;
 }
 
-main p {
-font-size: 18px;
-line-height: 1.5;
-}
-
-input, select {
-    padding: 8px;
-    margin: 5px; 
-    border: 1px solid gray; 
-    border-radius: 5px;
-}
-
-button {
+main button {
+    display: block;
+    margin: 20px auto;
     padding: 10px 20px;
     background-color: lightblue;
     border: none;
@@ -53,7 +52,15 @@ button {
 
 }
 
-button:hover {
+main button:hover {
     background-color: steelblue;
     color: white;
+}
+
+#output {
+    display: block;
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: darkblue;
 }
