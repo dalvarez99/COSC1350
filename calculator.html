@@ -1,71 +1,42 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="Content-Language" content="en">
-    <title>COSC1350 project</title>
-    <link rel="stylesheet" href="style.css">
-    </head>
+<head> 
+     <meta charset="UTF-8"> 
+     <meta http-equiv="Content-Language" content="en"> 
+    <title>Tip Calculator</title> 
+     <link rel="stylesheet" href="style.css"> 
+ </head>
 
  <body>
 
-    <nav> <a href="index.html">Home</a>
-         <a href="about.html">About Me</a> 
-         <a href="inspiration.html">Inspirations</a>
-         <a href="calculator.html">Calculator</a> 
-    </nav>
+    <nav> 
+        <a href="index.html">Home</a> 
+        <a href="about.html">About Me</a> 
+        <a href="inspiration.html">Inspirations</a> 
+        <a href="calculator.html">Calculator</a> 
+    </nav> 
 
-    <h1>Tip Calculator</h1>
+    <main> 
+        <h1>Tip Calculator</h1> 
+        <label for="bill">Bill Amount:</label>
+        <input type="number" id="bill" name="bill"> 
 
-    <label for ="bill">Bill Amount:</label>
-    <input type="number" id="bill" name="bill">
+        <br><br>
 
-    <br><br>
+        <label for="service">Service Quality:</label>
+        <select id="service" name="service"> 
+            <option value="25">Excellent (25%)</option> 
+            <option value="20">Good (20%)</option> 
+            <option value="15">Fair (15%)</option>
+            <option value="10">Poor (10%)</option> 
+        </select>
 
-    <label for="service">Service Quality:</label>
-    <select id="service" name="service">
-        <option value="25">Excellent (25%)</option>
-        <option value="20">Good (20%)</option>
-         <option value="15">Fair (15%)</option>
-         <option value="10">Poor (10%)</option>
-    </select>
+        <br><br> 
 
-    <br><br>
-
-    <button id="calculate">Calculate Tip</button>
-
-    <div id="sidebar">
-    This is a side bar.
-    </div>
-
-<header>
-    <h1 id="name">Dulce Alvarez</h1>
-    <h3> Web Developer</h3>
-
-  <p>My name is Dulce Alvarez. I am 27. I am currently an elementary teacher teaching Computer Science to k-5 students.</p>
-
-<img src="images/bitmoji.png" alt="Dulce Alvarez profile picture">
-
-<p> I took the screenshot using shift, command, 3 and then uploaded the image into my repository folder. I then used the img tag to pull the image from the folder. Along the way I had to make sure to commit and push so that everything would go to my GitHub. </p>
-
-    <a href="inspiration.html">inspirations</a>
-    <a href="about.html">about me</a>
-
-    </header>
-    <div>
-        <h3>Programming languages used on this site</h3>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-        </ul>
-    </div>
-<footer>
-    <a href="mailto:dulcealvarezperalta@westernwyoming.edu">dulcealvarezperalta@westernwyoming.edu</a>
-</footer>
-
-<script src="calculator.js"></script>
+        <button id="calculate">Calculate Tip</button> 
+    </main> 
+    <script src="calculator.js"></script> 
 
 </body>
 </html>

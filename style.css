@@ -1,6 +1,6 @@
 body {
         text-align: center;
-        background-color: black;
+        background-color: lavender;
     }
 
     header {
@@ -18,20 +18,16 @@ img {
     border: 3px solid black;
 }
 
-#sidebar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100px;
-    height: 200px;
-    background-color: pink;
-}
 main {
-background-color: lavender;
-padding: 20px;
-margin: 20px;
+background-color: white;
+padding: 30px;
+margin: 40px auto;
+max-width: 500px;
+border-radius: 10px;
 }
-
+main h1 {
+    color: darkblue; 
+}
 main h2 {
 color: darkblue;
 }
@@ -39,4 +35,25 @@ color: darkblue;
 main p {
 font-size: 18px;
 line-height: 1.5;
+}
+
+input, select {
+    padding: 8px;
+    margin: 5px; 
+    border: 1px solid gray; 
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: lightblue;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+button:hover {
+    background-color: steelblue;
+    color: white;
 }
