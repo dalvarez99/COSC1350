@@ -1,40 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-   
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="Content-Language" content="en">
-    <title>About Me</title>
-     <link rel="stylesheet" href="style.css">
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="guessing.js" defer></script>
 </head>
+
 <body>
-    <div id="sidebar">
-    This is a side bar.
-</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="inspiration.html">Inspirations</a>
+        <a href="calculator.html">Calculator</a>
+        <a href="guessing.html">Guessing Game</a>
+    </nav>
 
-<header>
-    <h1 id="name">About Me</h1>
-    <h3>Future Web Developer</h3>
-</header>
+    <header>
+        <h1>Number Guessing Game</h1>
 
-<main>
-    <h2>My Journey into Technology</h2>
+        <p>
+            I am thinking of a number between 1 and 100.
+            Can you guess the number in 10 tries?
+        </p>
 
-    <p>
-        I am an elementary teacher who enjoys teaching Computer Science
-        to students in grades K-5. I've previously taught 3rd and 4th grade, so this new position has been an adjustment. 
-    </p>
+        <form id="guessForm">
+            <label for="guess">Enter your guess:</label>
+            <input type="number" id="guess" name="guess"
+                   min="1" max="100" step="1" required>
+            <button type="submit">Submit Guess</button>
+        </form>
 
-    <p>
-        As I continue learning about web development, I am becoming more
-        comfortable with HTML and CSS. I am excited to continue learning
-        JavaScript and other programming languages so that I can create
-        websites and projects of my own.
-    </p>
-</main>
+        <p id="lastResult"></p>
+        <p id="guesses">Previous guesses:</p>
+        <p id="turnsLeft">You have 10 turns remaining.</p>
 
-<footer>
-    <a href="index.html">Back to Home</a>
-</footer>
+        <button id="restartButton" hidden>Play Again</button>
+    </header>
 
-</body> </html>
+    <footer>
+        <a href="mailto:dulcealvarezperalta@westernwyoming.edu">
+            dulcealvarezperalta@westernwyoming.edu
+        </a>
+    </footer>
+</body>
+
+</html>

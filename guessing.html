@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Language" content="en">
+    <title>Number Guessing Game</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="guessing.js" defer></script>
+</head>
+
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="inspiration.html">Inspirations</a>
+        <a href="calculator.html">Calculator</a>
+        <a href="guessing.html">Guessing Game</a>
+    </nav>
+
+    
+<main>
+    <h1>Number Guessing Game</h1>
+
+    <p>
+        I am thinking of a number between 1 and 100.
+        Can you guess the number in 10 tries?
+    </p>
+
+    <form id="guessForm">
+        <label for="guess">Enter your guess:</label>
+        <input type="number" id="guess" name="guess"
+               min="1" max="100" step="1" required>
+        <button type="submit">Submit Guess</button>
+    </form>
+
+    <p id="lastResult"></p>
+    <p id="guesses">Previous guesses:</p>
+    <p id="turnsLeft">You have 10 turns remaining.</p>
+
+    <button id="restartButton" hidden>Play Again</button>
+</main>
+
+    <footer>
+        <a href="mailto:dulcealvarezperalta@westernwyoming.edu">
+            dulcealvarezperalta@westernwyoming.edu
+        </a>
+    </footer>
+</body>
+
+</html>

@@ -64,3 +64,22 @@ main button:hover {
     font-weight: bold;
     color: darkblue;
 }
+
+#lastResult {
+    font-size: 18px;
+    font-weight: bold;
+    color: darkblue;
+}
+
+#guesses,
+#turnsLeft {
+    margin: 15px;
+}
+
+nav {
+    padding: 15px;
+}
+
+nav a {
+    margin: 0 8px;
+}
