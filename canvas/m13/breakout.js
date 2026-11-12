@@ -76,9 +76,7 @@ function keyUpHandler(event) {
     }
 }
 
-/*
- * draw() can be thought of as our main function.
-*/
+
 const draw = () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -120,6 +118,6 @@ const draw = () => {
 };
 
 
-// Try playing around with the refreshRate value.
+
 const refreshRate = 40;
 const intervalID = setInterval(draw, refreshRate);
