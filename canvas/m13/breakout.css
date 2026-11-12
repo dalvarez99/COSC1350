@@ -1,0 +1,40 @@
+/*
+Author: Dulce Alvarez
+Date: 11-11-2026
+File Name: breakout.css
+*/
+
+/* CSS Reset */
+body, header, nav, main, footer, img, h1, h3, ul {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+/* Style the webpage */
+body {
+    background-color: #e9e1f5;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* Style the heading */
+h1 {
+    color: #49366b;
+    padding: 25px;
+    font-size: 36px;
+}
+
+/* Center the game */
+main {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Style the canvas */
+canvas {
+    border: 4px solid #49366b;
+    background-color: #D6E5F5;
+    border-radius: 8px;
+}
