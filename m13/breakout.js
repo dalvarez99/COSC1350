@@ -75,14 +75,16 @@ const paddleRender = () => {
 // Function that draws the bricks
 const brickRender = () => {
     for (let i = 0; i < bricks.length; i++) {
-        ctx.fillStyle = "#8a55c7";
+        if (!bricks[i].hit) {
+            ctx.fillStyle = "#8a55c7";
 
-        ctx.fillRect(
-            bricks[i].x,
-            bricks[i].y,
-            brickWidth,
-            brickHeight
-        );
+            ctx.fillRect(
+                bricks[i].x,
+                bricks[i].y,
+                brickWidth,
+                brickHeight
+            );
+        }
     }
 };
 
@@ -116,7 +118,6 @@ function keyUpHandler(event) {
     }
 }
 
-
 const draw = () => {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -124,14 +125,42 @@ const draw = () => {
     xPos += xMoveDist;
     yPos += yMoveDist;
 
+    // Check for collisions with bricks
+    for (let i = 0; i < bricks.length; i++) {
+        if (!bricks[i].hit &&
+            xPos > bricks[i].x &&
+            xPos < bricks[i].x + brickWidth &&
+            yPos > bricks[i].y &&
+            yPos < bricks[i].y + brickHeight) {
+
+            bricks[i].hit = true;
+            yMoveDist = -yMoveDist;
+        }
+    }
+
     // Bounce the ball off the left and right walls
     if (xPos > canvas.width - ballRadius || xPos < ballRadius) {
         xMoveDist = -xMoveDist;
     }
 
-    // Bounce the ball off the top and bottom walls
-    if (yPos > canvas.height - ballRadius || yPos < ballRadius) {
+    // Bounce the ball off the top wall
+    if (yPos < ballRadius) {
         yMoveDist = -yMoveDist;
+    }
+
+    // Check for collision with the paddle
+    if (yPos + ballRadius >= yPaddle &&
+        xPos + ballRadius >= xPaddle &&
+        xPos - ballRadius <= xPaddle + 100 &&
+        yPos < yPaddle + 15) {
+
+        yMoveDist = -Math.abs(yMoveDist);
+    }
+
+    // Game over if the ball misses the paddle
+    else if (yPos + ballRadius >= canvas.height) {
+        clearInterval(intervalID);
+        alert("Game Over!");
     }
 
     // Move the paddle left or right
@@ -157,8 +186,6 @@ const draw = () => {
     paddleRender();
     brickRender();
 };
-
-
 
 const refreshRate = 40;
 const intervalID = setInterval(draw, refreshRate);
