@@ -26,6 +26,32 @@ let yPaddle = canvas.height - 30;
 let moveLeft = false;
 let moveRight = false;
 
+// Brick variables
+let brickRows = 4;
+let brickColumns = 6;
+let brickWidth = 90;
+let brickHeight = 25;
+let brickPadding = 10;
+let brickTopOffset = 40;
+let brickLeftOffset = 5;
+
+// Array to hold the bricks
+let bricks = [];
+
+// Create the brick objects
+for (let r = 0; r < brickRows; r++) {
+    for (let c = 0; c < brickColumns; c++) {
+        let brickX = (c * (brickWidth + brickPadding)) + brickLeftOffset;
+        let brickY = (r * (brickHeight + brickPadding)) + brickTopOffset;
+
+        bricks.push({
+            x: brickX,
+            y: brickY,
+            hit: false
+        });
+    }
+}
+
 // function that draws the ball on the canvas
 const ballRender = () => {
     ctx.beginPath();
@@ -44,6 +70,20 @@ const ballRender = () => {
 const paddleRender = () => {
     ctx.fillStyle = "#49366b";
     ctx.fillRect(xPaddle, yPaddle, 100, 15);
+};
+
+// Function that draws the bricks
+const brickRender = () => {
+    for (let i = 0; i < bricks.length; i++) {
+        ctx.fillStyle = "#8a55c7";
+
+        ctx.fillRect(
+            bricks[i].x,
+            bricks[i].y,
+            brickWidth,
+            brickHeight
+        );
+    }
 };
 
 // Listen for keys being pressed
@@ -112,9 +152,10 @@ const draw = () => {
         xPaddle = canvas.width - 100;
     }
 
-    // Draw the ball and paddle
+    // Draw the ball, paddle, and bricks
     ballRender();
     paddleRender();
+    brickRender();
 };
 
 
